@@ -42,12 +42,14 @@ lowerchar = confirm("Press 'OK' to add lowercase letters");
 // Function for options of creating an element 
   if (symbols) {
     passwordChar = sym;
+    // start with single options (number, upper, lower, symbol)
   } else if (numbers) {
     passwordChar = num;
   } else if (upperchar) {
     passwordChar = upper;
-  } else if (lowercase) {
+  } else if (lowerchar) {
     passwordChar = lower;
+    // Combination of two elements using AND function if one is true other is too 
   } else if (symbols && numbers) {
     passwordChar = sym += num;
   } else if (symbols && upperchar) {
@@ -56,22 +58,24 @@ lowerchar = confirm("Press 'OK' to add lowercase letters");
     passwordChar = sym += lower;
   } else if (numbers && upperchar) {
     passwordChar = num += upper;
-  } else if (numbers && lowercase) {
+  } else if (numbers && lowerchar) {
     passwordChar = num += lower;
-  } else if (upperchar && lowercase) {
+  } else if (upperchar && lowerchar) {
     passwordChar = upper += lower;
+    // Combination of three elements using AND function if one is true other two.
   } else if (symbols && numbers && upperchar) {
     passwordChar = sym += num += upper;
-  } else if (symbols && numbers && lowercase) {
+  } else if (symbols && numbers && lowerchar) {
     passwordChar = sym += num += lower;
-  } else if (symbols && upperchar && lowercase) {
+  } else if (symbols && upperchar && lowerchar) {
     passwordChar = sym += upper += lower;
-  } else if (lowercase && numbers && upperchar) {
+  } else if (lowerchar && numbers && upperchar) {
     passwordChar = lower += num += upper;
-  } else if (symbols && numbers && upperchar && lowercase) {
+    // Combination of four elements using AND function of one is true other three is. 
+  } else if (symbols && numbers && upperchar && lowerchar) {
     passwordChar = sym += num += upper += lower;
-  } else if (!symbols && !numbers && !upperchar && !lowercase)
-    alert("You must select at least one criterie, please start again!")
+  } else if (!symbols && !numbers && !upperchar && !lowerchar)
+    alert("At least choose a single material")
 
     // For loop to select random characters from the criteria strings
     for (var i = 0; i < passwordLength; i++) {
