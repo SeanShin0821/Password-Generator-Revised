@@ -32,24 +32,51 @@ function generatePassword() {
   // Else, return this alert and loop back to the start so they can choose a valid number
   alert("Please select a number between 8 - 128");
 }
-// After used chooses a number it will proceed by asking which elements to add 
+// After user chooses a number it will proceed by asking which elements to add 
 symbols = confirm("Press'OK' to add special characters");
 numbers = confirm("Press 'OK' to add numbers");
 upperchar = confirm("Press 'OK' to add uppercase letters");
 lowerchar = confirm("Press 'OK' to add lowercase letters");
 
 
-// Get references to the #generate element
-var generateBtn = document.querySelector("#generate");
+// Function for options of creating an element 
+  if (symbols) {
+    passwordChar = sym;
+  } else if (numbers) {
+    passwordChar = num;
+  } else if (upperchar) {
+    passwordChar = upper;
+  } else if (lowercase) {
+    passwordChar = lower;
+  } else if (symbols && numbers) {
+    passwordChar = sym += num;
+  } else if (symbols && upperchar) {
+    passwordChar = sym += upper;
+  } else if (symbols && lowercase) {
+    passwordChar = sym += lower;
+  } else if (numbers && upperchar) {
+    passwordChar = num += upper;
+  } else if (numbers && lowercase) {
+    passwordChar = num += lower;
+  } else if (upperchar && lowercase) {
+    passwordChar = upper += lower;
+  } else if (symbols && numbers && upperchar) {
+    passwordChar = sym += num += upper;
+  } else if (symbols && numbers && lowercase) {
+    passwordChar = sym += num += lower;
+  } else if (symbols && upperchar && lowercase) {
+    passwordChar = sym += upper += lower;
+  } else if (lowercase && numbers && upperchar) {
+    passwordChar = lower += num += upper;
+  } else if (symbols && numbers && upperchar && lowercase) {
+    passwordChar = sym += num += upper += lower;
+  } else if (!symbols && !numbers && !upperchar && !lowercase)
+    alert("You must select at least one criterie, please start again!")
 
-// Write password to the #password input
-function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
-
-  passwordText.value = password;
-
+    // For loop to select random characters from the criteria strings
+    for (var i = 0; i < passwordLength; i++) {
+      var password = passwordChar[Math.floor(Math.random() * passwordChar.length)]
+    }
+  
+    return (password);
 }
-
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
