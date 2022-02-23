@@ -17,14 +17,26 @@ var lower = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n
 
 //function for generating password 
 
+function generatePassword() {
 
-
-
-
-
-
-
-
+  var password = "";
+  var passwordChar = "";
+  // First prompt asking for users password length
+  while (true) {
+    passwordLength = parseInt(prompt("Choose the length of your password. This needs to be between 8 - 128"));
+      // least 8 no more than 128 
+    if (passwordLength >= 8 && passwordLength <= 128) {
+      //break function stops the unending loop 
+      break;
+    }
+  // Else, return this alert and loop back to the start so they can choose a valid number
+  alert("Please select a number between 8 - 128");
+}
+// After used chooses a number it will proceed by asking which elements to add 
+symbols = confirm("Press'OK' to add special characters");
+numbers = confirm("Press 'OK' to add numbers");
+upperchar = confirm("Press 'OK' to add uppercase letters");
+lowerchar = confirm("Press 'OK' to add lowercase letters");
 
 
 // Get references to the #generate element
