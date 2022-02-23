@@ -1,4 +1,22 @@
 // Assignment code here
+// Initial generation for button variable 
+var generateBtn = document.querySelector("#generate");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 // Get references to the #generate element
