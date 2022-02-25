@@ -82,8 +82,10 @@ lowerchar = confirm("Press 'OK' to add lowercase letters");
       var password = passwordChar[Math.floor(Math.random() * password.length)]
   }
   
-  return (password);
+  return password;
   }
+
+
 
   //original document from here 
 
