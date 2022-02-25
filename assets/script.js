@@ -20,10 +20,10 @@ var lower = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n
 function generatePassword() {
 
   var password = "";
-  var passwordChar = "";
+  var passwordChar = passwordLength;
   // First prompt asking for users password length
   while (true) {
-    passwordLength = parseInt(prompt("Choose the length of your password. This needs to be between 8 - 128"));
+    passwordLength = parseInt(prompt("Choose the length of your password. It needs to be between 8 - 128"));
       // At least 8 no more than 128 
     if (passwordLength >= 8 && passwordLength <= 128) {
       //break function stops the unending loop 
