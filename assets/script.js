@@ -77,7 +77,7 @@ lowerchar = confirm("Press 'OK' to add lowercase letters");
   } else if (!symbols && !numbers && !upperchar && !lowerchar)
     alert("At least choose a single material")
 
-    // FOr loop // //
+    // FOr loop //
   for (var i = 0; i < passwordLength; i++) {
       var password = passwordChar[Math.floor(Math.random() * password.length)]
   }
