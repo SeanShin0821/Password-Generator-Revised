@@ -8,6 +8,12 @@ var symbols;
 var numbers;
 var upperchar;
 var lowerchar;
+// Variable Declaration 
+var confirmLength = "";
+var confirmsymbols;
+var confirmnumbers;
+var confirmupperchar;
+var confirmlowerchar;//
 
 // Source for password generation 
 var sym = ["!", "@", "#", "$", "%", "^", "&", "*", "=", "-", "_", "(", ")", "~", "`"];
