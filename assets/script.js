@@ -2,7 +2,7 @@
 // Initial generation for button variable 
 var generateBtn = document.querySelector("#generate");
 
-// Inputs (char, num, special )
+// Inputs (char, num, special ) //
 var passwordLength;
 var symbols;
 var numbers;
