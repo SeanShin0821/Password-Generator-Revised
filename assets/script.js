@@ -13,7 +13,7 @@ var confirmLength = "";
 var confirmsymbols;
 var confirmnumbers;
 var confirmupperchar;
-var confirmlowerchar;// // 
+var confirmlowerchar;// // //
 
 // Source for password generation 
 var sym = ["!", "@", "#", "$", "%", "^", "&", "*", "=", "-", "_", "(", ")", "~", "`"];
